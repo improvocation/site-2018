@@ -1,0 +1,109 @@
+.card{
+  display: grid;
+  grid-template-areas: "t cct t2"
+                       "c1 c0 c2"
+                       "l ccc r";
+  grid-template-columns:10px 48px 10px
+                        10px 80px 10px
+                        35px 10px 35px;
+  background-image: url("landing_impro.jpg");
+  /* background-position: center; */
+  /* max-width: 500px; */
+  min-width: 342px;
+  min-height: 147px;
+  /* max-height: 300px; */
+  border-radius: 6%;
+  border-radius: 30px;
+  box-shadow: 10px 10px 42px -9px rgba(0,0,0,0.75);
+  border:solid 4px white;
+  padding: 11%;
+  padding:90px;
+  padding: 80px;
+  float: left;
+  margin-left: 13%;
+  margin-bottom: 10%;
+}
+.titre{
+  grid-column: t / span t2;
+  text-align:center;
+  color:white;
+  font-weight:bold;
+  font-size:27px;
+  font-size: 2.5em;
+}
+.left-button-container{
+  grid-area: l;
+  color:white;
+  /* margin-left: -50px; */
+}
+.right-button-container{
+  grid-area: r;
+  color:white;
+
+}
+.button-no{
+  background-color:white;
+  margin-left:5%;
+  color:blue;
+  margin-right:5%;
+  margin-bottom:0;
+}
+.button{
+    font-weight: bold;
+    background-color: white;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 6%;
+    border-radius: 8px;
+    border: solid 3px white;
+    background-color: #08aeeaa1;
+    background-image: linear-gradient(0deg, #08aeea63 0%, #2af598a3 100%);
+    font-size:24px;
+    text-align:center;
+    width: 179px;
+    font-size: 2em;
+}
+.left{
+  background-color: #fee14096;
+    background-image: linear-gradient(90deg, #fee14073 0%, #FA709A 100%);
+   //margin-left: 20%;
+}
+@media screen and (max-width: 700px) {
+  .card{
+      display: grid;
+      grid-template-areas: "t cct t2" "c1 c0 c2" "l ccc r";
+      grid-template-columns: 23% 60% 7%;
+      background-image: url(landing_impro.jpg);
+      /* background-position: center; */
+      max-width: 100%;
+      /* min-width: 241px; */
+      /* min-height: 202px; */
+      /* max-height: 300px; */
+      border-radius: 6%;
+      border-radius: 30px;
+      box-shadow: 10px 10px 42px -9px rgba(0,0,0,0.75);
+      border: solid 4px white;
+      /* padding: 11%; */
+      /* padding: 90px; */
+      /* padding: 80px; */
+      /* float: left; */
+      margin-left: 3%;
+      /* margin-bottom: 10%; */
+      /* min-width: 11%; */
+      /* margin-left: 8%; */
+      padding: 0%;
+    }
+    .left-button-container {
+      grid-area: c0;
+      color: white;
+      /* margin-left: -50px; */
+      margin-top: 54%;
+    }
+    .right-button-container {
+      color: white;
+      margin-top: 11%;
+      margin-left: 0;
+      margin-bottom: 64%;
+      grid-area: ccc;
+    }
+}

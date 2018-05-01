@@ -1,0 +1,80 @@
+body{
+  margin:0;
+  padding:0;
+  display: flex;
+  /* display: grid; */
+  display: block;
+  overflow-x: hidden;
+
+}
+.fond{
+  background-image:url("landing_impro.jpg");
+  height: 100vh;
+  /* width: 100vw; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 7%;
+}
+.landing-titre{
+  color: #000000;
+  text-align:center;
+  font-size: 3em;
+}
+.bottom-container{
+  display:block;
+  position:absolute;
+  bottom:0px;
+}
+.bottom-left{
+  color: #1d3b6e;
+  margin-bottom: 0px;
+  background-color: #9eb4a6;
+  text-align: center;
+  width: 69vw;
+  height: 6vh;
+  float: left;
+  padding-top: 4vh;
+  background-color: #da4141;
+  color: aliceblue;
+  /* font-family: inherit; */
+}
+.bottom-right{
+  padding-top: 5vh;
+  height: 5vh;
+  float: right;
+  background-color: white;
+  width:30vw;
+  border-top-right-radius: 92px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .bottom-left{
+    color: #1d3b6e;
+    margin-bottom: 0px;
+    background-color: #9eb4a6;
+    text-align: center;
+    width: 69vw;
+    height: 19vh;
+    float: left;
+    /* padding-top: 4vh; */
+    background-color: #da4141;
+    color: aliceblue;
+    /* font-family: inherit; */
+  }
+  .bottom-right{
+    padding-top: 13vh;
+    height: 10vh;
+    float: right;
+    background-color: white;
+    width:30vw;
+    border-top-right-radius: 92px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+  }
+}

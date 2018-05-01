@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  padding: 0;
+  /* display: grid; */
+  overflow-x:hidden;
+}
+.fond{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* padding-bottom: 18%; */
+  background-image:url("landing_impro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 7%;
+}
+.landing-titre{
+  text-align: center;
+}
+.bottom-container{
+  margin-top: auto;
+}
+.bottom-left{
+  display: flex;
+  height: 10vh;
+  float: left;
+  background-color: #da4141;
+  color: aliceblue;
+  width: 79%;
+}
+.bottom-right{
+  height: 10vh;
+  float: right;
+  display: flex;
+  font-weight: bold;
+  font-size: 23px;
+  border-top-right-radius: 92px;
+  /* text-align: center; */
+  width: 21%;
+  background-color: white;
+}
+.inner-hop{
+  margin: auto;
+}
