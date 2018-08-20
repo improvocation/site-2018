@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="landing_flex.css">
+    <script src="./formHelper.js" charset="utf-8"></script>
+    <style media="screen">
+       @import url('https://fonts.googleapis.com/css?family=Oswald');
+      .landing-titre{
+        color:white;
+      }
+      .message{
+        margin: 0 auto;
+        min-width: 30%;
+        padding: 4%;
+        /* background-color: #ffffff; */
+        /* background-image: linear-gradient(180deg, #ffffff 0%, #d6d6d600 100%); */
+        border-radius: 6px;
+        border: 3px solid white;
+        font-family: 'Oswald';
+        background-color: #2dd8ff7a;
+        background-image: linear-gradient(180deg, #21d4fd7a 66%, #b721ff8a 100%);
+        color: white;
+        /* background-color: #08AEEA; */
+        background-image: linear-gradient(0deg, #08aeea40 0%, #2af598b8 100%);
+       }
+      .form{
+        margin: 0 auto;
+        border: 4px #ffffff solid;
+        border-radius: 10px;
+        padding: 3%;
+        /* background-color: rgba(255, 235, 0, 0.42); */
+        min-width: 28%;
+        background-color: #305a73a3;
+        background-color: #21d4fd5e;
+        background-image: linear-gradient(6deg, #21d4fd7a -22%, #b721ff8a 100%)
+      }
+      .form h2{
+        text-align: center;
+        color:white;
+      }
+      label{
+        color: #FFF;
+        font-size: 21px;
+        /* font-weight: bolder; */
+        font-family: 'Oswald', sans-serif;
+      }
+      .error{
+        visibility: hidden;
+        color:red;
+        float: right;
+      }
+      input{
+        margin-bottom: 25px;
+        display: block;
+        /* background-color: #ffa5008c; */
+        border: 3px solid #89d2f9;
+        border-radius: 5px;
+        height: 23px;
+        width: 100%;
+        margin-top: 6px;
+        background-color: #ffffff;
+      }
+      input[type=button]{
+        width: fit-content;
+        background-color: #FEE140;
+        background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+        border-color: white;
+        color: white;
+        font-size: 15px;
+        padding: 3px;
+        margin: 0px;
+        height: fit-content;
+      }
+      .sent{
+        /*change the button style and color and text to say it's send*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fond">
+      <h1 class="landing-titre">Improvocation / Rejoindre L'impro débutant</h1>
+      <div class="message">
+        Message style rdv devant pub à 18H34
+      </div>
+      <form class="form" id="theForm" method="POST" action="sendmail.php"><!-- center the form -->
+        <h2>Contact</h2>
+        <!-- debutant emails to stage@impro-vocation.org     -->
+        <label for="name">Nom,Prénom</label>
+        <label id="nameEmpty" for="name" class="error">Obligatoire</label>
+        <input type="text" id="name" name="name" value="">
+
+        <label for="mail">Adresse mail</label>
+        <label id="mailEmpty" for="mail" class="error">Obligatoire</label>
+        <label id="mailValid" for="mail" class="error">Email non valide</label>
+        <input type="email" id="mail" name="mail" value="">
+
+        <label for="message">message</label>
+        <label id="messageEmpty" for="message" class="error">Obligatoire</label>
+        <input type="text" id="message" name="message" value="">
+
+        <input type="hidden" name="sendTo" value="stage@impro-vocation.org">
+        <input type="button" onclick="check()" name="" value="Envoyer">
+      </form>
+      <div class="bottom-container">
+      </div>
+      <script type="text/javascript">
+        function check() {
+          if(
+            notEmpty('name','nameEmpty')&&
+            notEmpty('mail','mailEmpty')&& 
+            isEmail('mail','mailValid') && 
+            notEmpty('message','messageEmpty')
+          )
+          {
+            ajaxForm('theForm','sendmail.php',function(response){
+              console.log(response);
+            })
+          }
+        }
+      </script>
+  </body>
+</html>
