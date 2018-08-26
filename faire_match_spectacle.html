@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Rejoindre L'impro débutant</title>
+    <title>Match/sepectacle</title>
     <link rel="stylesheet" href="landing_flex.css">
     <link rel="stylesheet" href="form.css">
     <script src="./formHelper.js" charset="utf-8"></script>
@@ -14,14 +14,9 @@
       <div class="title-container">
         <img src="logo.png" >
         <a href="./" class="landing-titre">Improvocation</a>
-    </div>
-      <form class="form" id="theForm" method="POST" action="sendmail.php"><!-- center the form -->
-        <h2>Débuter</h2>
-        <p>
-          Rejoignez-nous les lundis de 19h à 22h, pour le stage improvoc. 
-          Rendez-vous à 18h45 à l'entrée de la plaine de l'ulb
-        </p>
-        <h2>Contact</h2>
+      </div>
+      <form class="form" id="theForm" method="POST" action="sendmail.php">
+        <h2>Organiser un match , un sepectacle avec nous</h2>
         <!-- debutant emails to stage@impro-vocation.org     -->
         <label for="name">Nom,Prénom</label>
         <label id="nameEmpty" for="name" class="error">Obligatoire</label>
@@ -36,8 +31,8 @@
         <label id="messageEmpty" for="message" class="error">Obligatoire</label>
         <input type="text" id="message" name="message" value="">
 
-        <input type="hidden" name="sendTo" value="stage@impro-vocation.org">
-        <input type="hidden" name="type" value="rejoindre_debutant">
+        <input type="hidden" name="sendTo" value="presidence@impro-vocation.org">
+        <input type="hidden" name="type" value="match_spectacle">
         <input type="submit"id="sendButton" class="send"  name="" value="Envoyer">
       </form>
       <div class="bottom-container">
