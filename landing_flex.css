@@ -14,6 +14,26 @@ body{
   background-size: cover;
   margin-bottom: 7%;
 }
+.title-container{
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 15px;
+  margin-bottom: 1.6em;
+  display: flex;
+  align-items:center;
+}
+.title-container img{
+  width: 3em;
+  filter: invert(1);
+  border-radius: 11px;
+  margin-right: 0.5em;
+}
+.title-container a{
+  vertical-align: top;
+  font-size: 2.5em;
+  color: white;
+  text-decoration: none;  
+}
 .landing-titre{
   text-align: center;
 }
@@ -41,4 +61,14 @@ body{
 }
 .inner-hop{
   margin: auto;
+  text-decoration: none;
+}
+@media screen and (max-width:700px){
+  .fond{
+    height: 100vh;
+  }
+  .bottom-right{
+    font-size: 16px;
+    border-top-right-radius: 33px;
+  }
 }
